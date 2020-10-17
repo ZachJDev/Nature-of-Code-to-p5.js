@@ -1,0 +1,8 @@
+button {
+    display: block;
+    color: purple;
+}
+
+canvas {
+    border: 1px solid black;
+}
