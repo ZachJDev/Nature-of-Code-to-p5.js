@@ -10,10 +10,13 @@ function addTitleAndDesc(title, description) {
 
     const desc = document.createElement('p');
     desc.classList.add("description");
-    desc.innerText = description
+    desc.innerHTML = description
 
     section.appendChild(titleElement);
     section.appendChild(desc)
+    const sketchDiv = document.createElement("div")
+    sketchDiv.id = `${title}-sketch`
+    section.appendChild(sketchDiv)
     document.body.appendChild(section);
 
 }
