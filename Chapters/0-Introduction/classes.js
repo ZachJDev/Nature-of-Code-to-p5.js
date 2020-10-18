@@ -67,8 +67,8 @@ class DynamicWalker extends Walker {
     }
 
     step() {
-        const x = this.context.mouseX >= this.context.width/2 ? 1: -1
-        const y = this.context.mouseY >= this.context.height/2 ? 1: -1
+        const x = this.context.mouseX >= this.x ? 1: -1
+        const y = this.context.mouseY >= this.y ? 1: -1
         
         const num = this.context.random(1);
 

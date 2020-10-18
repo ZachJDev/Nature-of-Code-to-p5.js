@@ -33,7 +33,7 @@ const Chap0 = {
     },
     block7: {
         title: "Exerise: I.3: Dyanmic Random Walk",
-        description: `The Walker has a 50% chance to move towards the mouse's current quadrant.`,
+        description: `The Walker has a 50% chance to move towards the mouse's current position.`,
         id: "Exercise3"
     }
 }
