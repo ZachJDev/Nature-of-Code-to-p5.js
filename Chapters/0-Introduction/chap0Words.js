@@ -40,5 +40,61 @@ const Chap0 = {
         title: "Example I.4: Normal Distribution and Standard  Deviation",
         id: "ExI4",
         description: "Things Are Happening!"       
-    }
+    },
+    gaussianSplatter : {
+        title: "splatter",
+        description: "some splatter",
+        id: "Exercise4"
+
+    },
+    gaussianWalk: {
+        title: "Exercise I.5: Gaussian Random Walk",
+        description: "A Random walk where the step size is determined by a normal distribution",
+        id:"Exercise5"
+    },
+     custDist: {
+         title: "Custom Distributions",
+         description: "A Custom Distribution",
+         id: "custDist"
+     },
+     monteCarloWalker : {
+         title: "Monte Carlo Walker",
+         description: "A Walker who's step size is governed by the monte carlo method",
+         id: "exercise6"
+
+     }, monteCarloDist: {
+        title: "Foo",
+        id:"mcDist",
+        description: "foo"
+     },
+     perlinPearl: {
+         title: "Moving a Perlin Ball",
+         id:"pearl",
+         description: "foo"
+     },
+     perlinGraph: {
+         title: "Graph of Perlin Noise over time.",
+         id: "pGraph",
+         description: "Fooooooo"
+     },
+     perlinWalker: {
+         title: "Perlin Random Walk",
+         id: "perlinWalk",
+         description: "Coming Soon!"
+     },
+     perlinWalkerByStepSize: {
+         title: "t",
+         id: "pWalkSize",
+         description: "t"
+     },
+     perlin2d: {
+         title: "2D Perlin Noise Texture",
+         description: "Noise Texture",
+         id: "noise2dtex"
+     },
+     perlinTerrain: {
+         title:"terrain",
+         id: "pterrain",
+         description:"3d Terrain Generation"
+     }
 }
