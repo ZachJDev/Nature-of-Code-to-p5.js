@@ -149,3 +149,7 @@ const seven = p => {
 }
 
 new p5(seven, Chap0.block7.id)
+
+// Example I.4 Normal Distribution
+
+addTitleAndDesc(Chap0.block8)

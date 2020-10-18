@@ -32,8 +32,13 @@ const Chap0 = {
          assign different probabilities to different movement options.`
     },
     block7: {
-        title: "Exerise: I.3: Dyanmic Random Walk",
+        title: "Exerise: I.3: Dynamic Random Walk",
         description: `The Walker has a 50% chance to move towards the mouse's current position.`,
         id: "Exercise3"
+    },
+    block8: {
+        title: "Example I.4: Normal Distribution and Standard  Deviation",
+        id: "ExI4",
+        description: "Things Are Happening!"       
     }
 }
