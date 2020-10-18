@@ -1,0 +1,14 @@
+{
+    "p5.js 'instance mode' sketch": {
+    "prefix": ["p5js", "sketch"],
+    "body": [
+      "const ${1:name} = ${2:sketch} => {\n\n\n",
+      "\t${2:sketch}.setup = () => {",
+      "\n\t};",
+      "\t${2:sketch}.draw = () => {",
+      "\n\t};\n};",
+      "new p5(${1:name})"
+    ],
+    "description": "p5js instance mode sketch, immediately called."
+  }
+}
