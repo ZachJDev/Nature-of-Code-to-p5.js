@@ -35,7 +35,6 @@ function addTitleAndDesc(block) {
 const setButton = (id, context) => {
 
     let button = document.querySelector(`#${id} button`)
-    console.log(button.textContent)
     button.addEventListener("click", () => {
         if(context.isLooping()) context.noLoop();
         else context.loop();
