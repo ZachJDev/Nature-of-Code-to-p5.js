@@ -138,8 +138,8 @@ class MonteCarloWalker extends Walker {
         let r1, r2
         do {
              r1 = this.context.random(max)
-             r2 = this.context.random(max)
-        } while(r2 > r1*r1)
+             r2 = this.context.random(max ** 2)
+        } while(r2 > r1 ** 2)
 
         return r1;
     }

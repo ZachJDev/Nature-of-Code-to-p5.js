@@ -326,7 +326,7 @@ const monteCarloDist = (p) => {
 
     do {
       r1 = p.random(max);
-      r2 = p.random(max);
+      r2 = p.random(max ** 2);
     } while (r2 > r1 ** 2);
     // console.log(r1)
     return r1;
@@ -392,6 +392,8 @@ const perlinNoiseGraph = (p) => {
 };
 new p5(perlinNoiseGraph, Chap0.perlinGraph.id);
 
+
+// Perlin Walker
 addTitleAndDesc(Chap0.perlinWalker);
 
 const pWalker = (p) => {
