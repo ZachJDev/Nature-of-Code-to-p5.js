@@ -40,3 +40,8 @@ const setButton = (id, context) => {
         else context.loop();
     })
 }
+
+const contains = (x, y, context) => {
+     return x > 0 && x < context.width &&
+       y > 0 && y < context.height
+}

@@ -373,12 +373,12 @@ const perlinNoiseGraph = (p) => {
     p.background(255);
     let prev = { x: 0, y: 0 };
     for (let i = 0; i < p.width; i += 1) {
-      let y = p.map(p.noise(t), 0, 1, p.height * 0.25, p.height * 0.75);
+      let y = p.map(p.noise(t), 0, 1,0, p.height);
       p.line(prev.x, prev.y, i, y);
       prev = { x: i, y: y };
-      t += .5;
+      t += .005;
     }
-    t = 1 + p.frameCount * .5;
+    t = 1 + p.frameCount * .005;
   };
 
   setButton(Chap0.perlinGraph.id, p);
@@ -387,6 +387,7 @@ new p5(perlinNoiseGraph, Chap0.perlinGraph.id);
 
 
 // Perlin Walker
+
 addTitleAndDesc(Chap0.perlinWalker);
 
 const pWalker = (p) => {
@@ -505,20 +506,30 @@ const noiseElevation = (p) => {
   };
   p.draw = () => {
     p.background(0);
-    p.stroke(255);
-    p.fill(200, 200, 200, 50);
+    // p.stroke(255);
+    // p.noStroke()
+    // p.fill(200, 200, 200, 50);
     p.rotateX(p.PI / 3)
     p.rotateZ(p.frameCount * .01)
     p.translate(-w/2 - 40, -h/2 , 10 )
     for (let y = 0; y < rows - 1; y++) {
         p.beginShape(p.TRIANGLE_STRIP);
         for (let x = 0; x < cols; x++) {
+            bcolor = terrain[x][y] > 0 ? 0 : 50;
+            rcolor = bcolor === 0 ? 255: 0
+            p.fill(rcolor, 40, bcolor, 150)
             p.vertex(x* SCL, y * SCL,terrain[x][y])
             p.vertex(x* SCL, (y + 1) * SCL, terrain[x][y + 1])
         }
         p.endShape();
     }
+    p.mousePressed = () => {
+        if(contains(p.mouseX, p.mouseY, p)) p.noStroke()
+    }
 
+    p.mouseReleased = () => {
+        if(contains(p.mouseX, p.mouseY, p)) p.stroke(255)
+    }
   };
 
   setButton(Chap0.perlinTerrain.id, p)
