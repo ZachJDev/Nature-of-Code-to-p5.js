@@ -485,7 +485,7 @@ const noiseElevation = (p) => {
   let terrain
 
   p.setup = () => {
-      p.createCanvas(600, 600, p.WEBGL);
+      p.createCanvas(900, 600, p.WEBGL);
 
       cols = w / SCL;
       rows = h / SCL;
@@ -502,27 +502,31 @@ const noiseElevation = (p) => {
             }
             yOff += .1;
       }
-      p.background(0);
-      p.stroke(255);
-      p.fill(200, 200, 200, 50);
-  
-      // p.translate(p.width /2, p.height /2 )
-      p.rotateX(p.PI / 3)
-      p.translate(-w/2, -h/2)
-  
-      for (let y = 0; y < rows - 1; y++) {
-          p.beginShape(p.TRIANGLE_STRIP);
-        for (let x = 0; x < cols; x++) {
-          p.vertex(x* SCL, y * SCL,terrain[x][y])
-          p.vertex(x* SCL, (y + 1) * SCL, terrain[x][y + 1])
-        }
-        p.endShape();
-      }
+
+      p.frameRate(20)
+      
+      p.noLoop();
 
   };
   p.draw = () => {
-   
+    p.background(0);
+    p.stroke(255);
+    p.fill(200, 200, 200, 50);
+    p.rotateX(p.PI / 3)
+    p.rotateZ(p.frameCount * .01)
+    p.translate(-w/2 - 40, -h/2 , 10 )
+    for (let y = 0; y < rows - 1; y++) {
+        p.beginShape(p.TRIANGLE_STRIP);
+        for (let x = 0; x < cols; x++) {
+            p.vertex(x* SCL, y * SCL,terrain[x][y])
+            p.vertex(x* SCL, (y + 1) * SCL, terrain[x][y + 1])
+        }
+        p.endShape();
+    }
+
   };
+
+  setButton(Chap0.perlinTerrain.id, p)
 };
 new p5(noiseElevation);
 
