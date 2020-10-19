@@ -358,21 +358,15 @@ const perlinPearl = (p) => {
 };
 new p5(perlinPearl, Chap0.perlinPearl.id);
 
+// Perlin Graph
+
 addTitleAndDesc(Chap0.perlinGraph);
 const perlinNoiseGraph = (p) => {
   let t = 1;
 
   p.setup = () => {
     p.createCanvas(1000, 200);
-    let t = p.random(0, 1000);
-    let prev = { x: 0, y: 0 };
-    for (let i = 0; i < p.width; i += 1) {
-      let y = p.map(p.noise(t), 0, 1, p.height * 0.25, p.height * 0.75);
-      p.point(i, y);
-      p.line(prev.x, prev.y, i, y);
-      prev = { x: i, y: y };
-      t += 0.05;
-    }
+     t = p.random(0, 1000);
     p.noLoop();
   };
   p.draw = () => {
@@ -380,12 +374,11 @@ const perlinNoiseGraph = (p) => {
     let prev = { x: 0, y: 0 };
     for (let i = 0; i < p.width; i += 1) {
       let y = p.map(p.noise(t), 0, 1, p.height * 0.25, p.height * 0.75);
-      // p.point(i,y);
       p.line(prev.x, prev.y, i, y);
       prev = { x: i, y: y };
-      t += 0.05;
+      t += .5;
     }
-    t = 1 + p.frameCount * 0.05;
+    t = 1 + p.frameCount * .5;
   };
 
   setButton(Chap0.perlinGraph.id, p);

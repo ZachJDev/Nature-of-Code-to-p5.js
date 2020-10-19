@@ -128,7 +128,7 @@ class MonteCarloWalker extends Walker {
     }
 
     step() {
-        let stepSize = this.monteCarlo(10)
+        let stepSize = this.monteCarlo(5)
         this.x += this.stepX = this.context.random(-stepSize, stepSize) 
         this.y += this.stepY = this.context.random(-stepSize, stepSize) 
         
