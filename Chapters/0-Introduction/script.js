@@ -1,4 +1,4 @@
-// Sketch 1: random walk with 4 equally
+{// Sketch 1: random walk with 4 equally
 addTitleAndDesc(Chap0.block1);
 
 const one = (p) => {
@@ -16,9 +16,9 @@ const one = (p) => {
 
   setButton(Chap0.block1.id, p);
 };
-new p5(one, Chap0.block1.id);
+new p5(one, Chap0.block1.id);}
 
-// Sketch 2 8-direction random walk.
+{// Sketch 2 8-direction random walk.
 addTitleAndDesc(Chap0.block2);
 const two = (p) => {
   let w;
@@ -36,8 +36,8 @@ const two = (p) => {
   setButton(Chap0.block2.id, p);
 };
 new p5(two, Chap0.block2.id);
-
-// sketch 3: Random Number distribution
+}
+{// sketch 3: Random Number distribution
 
 addTitleAndDesc(Chap0.block3);
 
@@ -67,9 +67,9 @@ const three = (p) => {
   };
   setButton(Chap0.block3.id, p);
 };
-new p5(three, Chap0.block3.id);
+new p5(three, Chap0.block3.id);}
 
-// Exercise i.1 -- Random walk tends toward bottom right.
+{// Exercise i.1 -- Random walk tends toward bottom right.
 addTitleAndDesc(Chap0.block4);
 
 const four = (p) => {
@@ -87,9 +87,9 @@ const four = (p) => {
 
   setButton(Chap0.block4.id, p);
 };
-new p5(four, Chap0.block4.id);
+new p5(four, Chap0.block4.id);}
 
-// Exercise I.2 -- Probability of pulling two aces in a row from a deck of cards.
+{// Exercise I.2 -- Probability of pulling two aces in a row from a deck of cards.
 addTitleAndDesc(Chap0.block5);
 const five = (p) => {
   const probability = (4 / 52) * (4 / 51);
@@ -106,9 +106,9 @@ const five = (p) => {
 
   setButton(Chap0.block5.id, p);
 };
-new p5(five, Chap0.block5.id);
+new p5(five, Chap0.block5.id);}
 
-// Example I.3: Walker that moves to the right
+{// Example I.3: Walker that moves to the right
 addTitleAndDesc(Chap0.block6);
 
 const six = (p) => {
@@ -128,9 +128,9 @@ const six = (p) => {
   setButton(Chap0.block6.id, p);
 };
 
-new p5(six, Chap0.block6.id);
+new p5(six, Chap0.block6.id);}
 
-// Exercise I.3: Dyanmic Walker
+{// Exercise I.3: Dyanmic Walker
 
 addTitleAndDesc(Chap0.block7);
 
@@ -150,9 +150,9 @@ const seven = (p) => {
   setButton(Chap0.block7.id, p);
 };
 
-new p5(seven, Chap0.block7.id);
+new p5(seven, Chap0.block7.id);}
 
-// Example I.4 Normal Distribution
+{// Example I.4 Normal Distribution
 
 addTitleAndDesc(Chap0.block8);
 
@@ -171,9 +171,9 @@ const eight = (p) => {
 
   setButton(Chap0.block8.id, p);
 };
-new p5(eight, Chap0.block8.id);
+new p5(eight, Chap0.block8.id);}
 
-// a Gaussian paint splatter.
+{// a Gaussian paint splatter.
 addTitleAndDesc(Chap0.gaussianSplatter);
 
 const splatter = (p) => {
@@ -207,9 +207,9 @@ const splatter = (p) => {
     return false;
   };
 };
-new p5(splatter, Chap0.gaussianSplatter.id);
+new p5(splatter, Chap0.gaussianSplatter.id);}
 
-// Gaussian Random Walk
+{// Gaussian Random Walk
 
 addTitleAndDesc(Chap0.gaussianWalk);
 
@@ -227,9 +227,9 @@ const gWalk = (p) => {
 
   setButton(Chap0.gaussianWalk.id, p);
 };
-new p5(gWalk, Chap0.gaussianWalk.id);
+new p5(gWalk, Chap0.gaussianWalk.id);}
 
-// an Almost Levy Flight
+{// an Almost Levy Flight
 
 addTitleAndDesc(Chap0.custDist);
 
@@ -247,9 +247,9 @@ const custDist = (p) => {
 
   setButton(Chap0.custDist.id, p);
 };
-new p5(custDist, Chap0.custDist.id);
+new p5(custDist, Chap0.custDist.id);}
 
-// Exercise 6
+{// Exercise 6
 
 addTitleAndDesc(Chap0.monteCarloWalker);
 
@@ -278,9 +278,9 @@ const monteCarlo = (p) => {
 
   setButton(Chap0.monteCarloWalker.id, p);
 };
-new p5(monteCarlo, Chap0.monteCarloWalker.id);
+new p5(monteCarlo, Chap0.monteCarloWalker.id);}
 
-// Monte Carlo Distribution y=x^2
+{// Monte Carlo Distribution y=x^2
 
 addTitleAndDesc(Chap0.monteCarloDist);
 
@@ -334,8 +334,9 @@ const monteCarloDist = (p) => {
 
   setButton(Chap0.monteCarloDist.id, p);
 };
-new p5(monteCarloDist, Chap0.monteCarloDist.id);
+new p5(monteCarloDist, Chap0.monteCarloDist.id);}
 
+{// A Perlin Pearl
 addTitleAndDesc(Chap0.perlinPearl);
 const perlinPearl = (p) => {
   let t = 0;
@@ -356,9 +357,9 @@ const perlinPearl = (p) => {
 
   setButton(Chap0.perlinPearl.id, p);
 };
-new p5(perlinPearl, Chap0.perlinPearl.id);
+new p5(perlinPearl, Chap0.perlinPearl.id);}
 
-// Perlin Graph
+{// Perlin Graph
 
 addTitleAndDesc(Chap0.perlinGraph);
 const perlinNoiseGraph = (p) => {
@@ -383,10 +384,10 @@ const perlinNoiseGraph = (p) => {
 
   setButton(Chap0.perlinGraph.id, p);
 };
-new p5(perlinNoiseGraph, Chap0.perlinGraph.id);
+new p5(perlinNoiseGraph, Chap0.perlinGraph.id);}
 
 
-// Perlin Walker
+{// Perlin Walker
 
 addTitleAndDesc(Chap0.perlinWalker);
 
@@ -404,10 +405,10 @@ const pWalker = (p) => {
 
   setButton(Chap0.perlinWalker.id, p);
 };
-new p5(pWalker, Chap0.perlinWalker.id);
+new p5(pWalker, Chap0.perlinWalker.id);}
 
+{ // Perlin noise determines walker step size
 addTitleAndDesc(Chap0.perlinWalkerByStepSize);
-
 const pWalkSize = (p) => {
   let w;
   p.setup = () => {
@@ -422,9 +423,9 @@ const pWalkSize = (p) => {
 
   setButton(Chap0.perlinWalkerByStepSize.id, p);
 };
-new p5(pWalkSize, Chap0.perlinWalkerByStepSize.id);
+new p5(pWalkSize, Chap0.perlinWalkerByStepSize.id);}
 
-// 2d Noise
+{// 2d Noise
 
 addTitleAndDesc(Chap0.perlin2d);
 
@@ -463,9 +464,9 @@ const nosie2d = (p) => {
     p.pixels[index + 3] = 255;
   }
 };
-new p5(nosie2d, Chap0.perlin2d.id);
+new p5(nosie2d, Chap0.perlin2d.id);}
 
-// 3d Terrain
+{// 3d Terrain
 
 addTitleAndDesc(Chap0.perlinTerrain);
 
@@ -534,5 +535,5 @@ const noiseElevation = (p) => {
 
   setButton(Chap0.perlinTerrain.id, p)
 };
-new p5(noiseElevation);
+new p5(noiseElevation);}
 
