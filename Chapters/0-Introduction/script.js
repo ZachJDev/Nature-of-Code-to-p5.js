@@ -367,7 +367,6 @@ const perlinNoiseGraph = (p) => {
 
   p.setup = () => {
     p.createCanvas(1000, 200);
-     t = p.random(0, 1000);
     p.noLoop();
   };
   p.draw = () => {
@@ -377,15 +376,14 @@ const perlinNoiseGraph = (p) => {
       let y = p.map(p.noise(t), 0, 1,0, p.height);
       p.line(prev.x, prev.y, i, y);
       prev = { x: i, y: y };
-      t += .005;
+      t += .01;
     }
-    t = 1 + p.frameCount * .005;
+    t = 1 + p.frameCount * .01;
   };
 
   setButton(Chap0.perlinGraph.id, p);
 };
 new p5(perlinNoiseGraph, Chap0.perlinGraph.id);}
-
 
 {// Perlin Walker
 
