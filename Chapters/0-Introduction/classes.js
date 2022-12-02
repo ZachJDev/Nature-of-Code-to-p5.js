@@ -23,8 +23,8 @@ class EightStepWalker extends Walker {
     }
 
     step() {
-        let stepX = this.context.int(this.context.random(3)) -1;
-        let stepY = this.context.int(this.context.random(3)) -1;
+        let stepX = this.context.int(this.context.random(3)) - 1;
+        let stepY = this.context.int(this.context.random(3)) - 1;
 
         this.x += stepX;
         this.y += stepY;
@@ -37,8 +37,8 @@ class DownRightWalker extends Walker {
     }
     
     step() {
-        let stepX = this.context.int(this.context.random(5)) -1 >= 1 ? 1 : -1
-        let stepY = this.context.int(this.context.random(5)) -1 >= 1 ? 1 : -1
+        let stepX = this.context.int(this.context.random(5)) -1 >= 2 ? 1 : -1
+        let stepY = this.context.int(this.context.random(5)) -1 >= 2 ? 1 : -1
 
         this.x += stepX;
         this.y += stepY;
